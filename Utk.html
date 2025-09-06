@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTKARSH - Educational Notes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 20px 0;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo h1 {
+            font-size: 28px;
+            margin-left: 10px;
+            font-weight: 600;
+        }
+        
+        .logo-icon {
+            font-size: 32px;
+            background: white;
+            color: #1e3c72;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .nav {
+            display: flex;
+            list-style: none;
+            margin-top: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        
+        .nav li {
+            margin-right: 20px;
+        }
+        
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        
+        .nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .content {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-top: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        
+        .subject-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f1f1f1;
+        }
+        
+        .subject-title {
+            color: #1e3c72;
+            font-size: 24px;
+        }
+        
+        .chapter-info {
+            color: #666;
+            font-size: 16px;
+        }
+        
+        .notes-content {
+            font-size: 16px;
+        }
+        
+        .notes-content h2 {
+            color: #1e3c72;
+            margin: 20px 0 10px;
+            font-size: 20px;
+        }
+        
+        .notes-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .important {
+            background: #fff9e6;
+            border-left: 4px solid #ffcc00;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .important h3 {
+            color: #e6a700;
+            margin-bottom: 10px;
+        }
+        
+        .definition {
+            background: #e8f4ff;
+            border-left: 4px solid #0066cc;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .definition h3 {
+            color: #0066cc;
+            margin-bottom: 10px;
+        }
+        
+        .formula {
+            background: #f9f2ff;
+            border-left: 4px solid #6600cc;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .formula h3 {
+            color: #6600cc;
+            margin-bottom: 10px;
+        }
+        
+        .example {
+            background: #f0f8f0;
+            border-left: 4px solid #00aa44;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .example h3 {
+            color: #00aa44;
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .logo-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo {
+                margin-bottom: 15px;
+            }
+            
+            .nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .nav li {
+                margin: 5px;
+            }
+            
+            .subject-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .subject-title {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <div class="logo">
+                    <div class="logo-icon">U</div>
+                    <h1>UTKARSH Education</h1>
+                </div>
+            </div>
+            
+            <ul class="nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Notes</a></li>
+                <li><a href="#">Tests</a></li>
+                <li><a href="#">Video Lectures</a></li>
+                <li><a href="#">Practice</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="content">
+            <div class="subject-header">
+                <h1 class="subject-title">Physics - Electromagnetism</h1>
+                <div class="chapter-info">Chapter 5: Magnetic Effects of Electric Current</div>
+            </div>
+            
+            <div class="notes-content">
+                <h2>Introduction to Electromagnetism</h2>
+                <p>Electromagnetism is a branch of physics involving the study of the electromagnetic force, a type of physical interaction that occurs between electrically charged particles. The electromagnetic force usually exhibits electromagnetic fields such as electric fields, magnetic fields, and light.</p>
+                
+                <div class="important">
+                    <h3>Important Concept</h3>
+                    <p>When an electric current flows through a conductor, it produces a magnetic field around it. This phenomenon is known as electromagnetism.</p>
+                </div>
+                
+                <h2>Magnetic Field Due to Current Carrying Conductor</h2>
+                <p>The magnetic field produced by a current-carrying conductor can be determined using the right-hand rule. If you grasp the conductor in your right hand with the thumb pointing in the direction of the current, your fingers will curl in the direction of the magnetic field lines.</p>
+                
+                <div class="formula">
+                    <h3>Important Formula</h3>
+                    <p>Magnetic field due to a straight current-carrying conductor: B = (μ₀ * I) / (2 * π * d)</p>
+                    <p>Where:<br>
+                    B = Magnetic field<br>
+                    μ₀ = Permeability of free space<br>
+                    I = Current<br>
+                    d = Distance from the conductor</p>
+                </div>
+                
+                <div class="definition">
+                    <h3>Key Definition</h3>
+                    <p><strong>Electromagnet:</strong> A soft metal core made into a magnet by the passage of electric current through a coil surrounding it. The strength of an electromagnet can be easily varied by changing the amount of electric current that flows through it.</p>
+                </div>
+                
+                <h2>Applications of Electromagnetism</h2>
+                <p>Electromagnetism has numerous practical applications in everyday life and industry. Some common applications include electric motors, generators, transformers, magnetic locks, and MRI machines in hospitals.</p>
+                
+                <div class="example">
+                    <h3>Practical Example</h3>
+                    <p><strong>Electric Bell:</strong> The electric bell is a common example of electromagnetism. When the button is pressed, current flows through the electromagnet which pulls the hammer to strike the gong. Simultaneously, the circuit breaks which demagnetizes the electromagnet and the spring brings the hammer back to its original position.</p>
+                </div>
+                
+                <h2>Faraday's Law of Electromagnetic Induction</h2>
+                <p>Faraday's law states that whenever there is a change in the magnetic flux linked with a circuit, an electromotive force is induced in the circuit. The magnitude of the induced emf is equal to the rate of change of magnetic flux.</p>
+                
+                <div class="formula">
+                    <h3>Faraday's Law Formula</h3>
+                    <p>Induced EMF: ε = -N * (dΦₑ/dt)</p>
+                    <p>Where:<br>
+                    ε = Induced EMF<br>
+                    N = Number of turns in the coil<br>
+                    dΦₑ/dt = Rate of change of magnetic flux</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>© 2023 UTKARSH Education App. All rights reserved.</p>
+            <p>These notes are for educational purposes only. Unauthorized distribution is prohibited.</p>
+        </div>
+    </footer>
+</body>
+</html>
